@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+body {
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<nav>
+	<ul>
+		<a href="{%url 'basic_app:index'%}"><b>Index</b></a>|||||||||
+	<a href="{%url 'basic_app:register'%}"><b>register</b></a>|||||||||||
+	<a href="{%url 'admin:index'%}"><b>admin</b></a></ul></li>
+	
+</nav>
+{%block body_block%}
+{%endblock%}
+</body>
+</html>

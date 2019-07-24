@@ -1,0 +1,17 @@
+{%extends 'basic_app/base.html'%}
+
+{%block body_block%}
+{%if registered %}
+	<h3>Thanq for registration</h3>
+	<h1>Welcome {{info}}</h1>
+{%else%}
+<h1>please Register</h1>
+{%endif%}
+
+<form enctype="multipart/form-data" method="POST" >
+	{%csrf_token%}
+	{{user_form.as_p}}
+	{{profile_form.as_p}}
+	<input type="submit" name="register">
+</form>
+	{%endblock%}
