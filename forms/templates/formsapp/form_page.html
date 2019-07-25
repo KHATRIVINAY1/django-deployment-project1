@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form page</title>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
+</head>
+
+<body>
+	<h3 style="color:Tomato;">Hello World</h3>
+
+<h1 style="= background-color: Yellow "> HEllo welcome to the form page</h1>
+<form method ="POST">
+           
+           {{form.as_p}}
+           {%csrf_token%}
+           <input type="submit" name="submit">
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+<head>
+	<title>Users</title>
+	<link rel="stylesheet" type="text/css" href="{%static "css/animate.css"%}">
+<script src="{%static "js/all.js"%}"></script>
+
+</head>
+<body>
+	<h1> Welcome </h1>
+	<form method="POST">
+		{{form.as_p}}
+		{%csrf_token%}
+		<input type="submit" value="Submit">
+	</form>
+	
+</body>
+</html>
