@@ -1,0 +1,22 @@
+{%extends 'blog/base.html'%}
+{%block content%}
+
+<h1> About the Blog</h1>
+<div class="jubotron">
+	{%if user.is_authenticated%}
+<h1>You are already login </h1>
+{%else%}
+<h1>please Login</h1>
+<form action="{%url 'user_login'%}" method="POST">
+	{% csrf_token %}
+
+	<input type="text" name="username">
+
+	<input type="password" name="password">
+
+	<input type="submit" name="" value="login">
+
+</form>
+{%endif%}
+</div>
+{%endblock%}

@@ -1,0 +1,14 @@
+{%extends 'blog/base.html'%}
+
+{%block content%}
+<div class="jumbotron">
+    {%for post in post_list %}
+        <h1><a href="{%url 'post_detail' pk=post.pk%}">{{post.title}}</a></h1>
+        <div color="BLUE">    <p>Published on: {{post.published_date|date:'D M Y'}} </p>
+            </div>
+         <p><a href="{%url 'post_detail' pk=post.pk%}"> Comment: {{post.approved_comment.count}}</a> </p>
+
+    {%endfor%}
+
+</div>
+{%endblock%}
